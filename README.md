@@ -77,10 +77,13 @@ where Y represents AHI and X represents BMI.
 
 ## Repository Structure
 
-- `bmi-sleep-apnea-regression.Rproj` - R project file
+- `Project.Rproj` - RStudio project file
 - `bmi_ahi_regression.R` - R code used for the statistical analysis
 - `report.pdf` - Final project report
-- `figures/` - Figures used in the report
+- `bmi_ahi_scatterplot.png` - Scatterplot of BMI and AHI with the fitted
+  regression line
+- `residuals_fitted.png` - Residuals versus fitted values diagnostic plot
+- `normal_qq.png` - Normal Q-Q plot of the regression residuals
 - `README.md` - Description of the project and repository
 
 The raw DREAMT dataset and `participant_info.csv` are not stored in this
@@ -93,7 +96,7 @@ repository.
 2. Download `participant_info.csv`.
 3. Place `participant_info.csv` in the same folder as
    `bmi_ahi_regression.R`.
-4. Open `bmi-sleep-apnea-regression.Rproj` in RStudio.
+4. Open `Project.Rproj` in RStudio.
 5. Open `bmi_ahi_regression.R`.
 6. Run the R script from beginning to end to reproduce the statistical
    analysis.
