@@ -28,12 +28,26 @@ The dataset is available at:
 
 https://physionet.org/content/dreamt/2.2.0/
 
-The original dataset is not included in this repository because it was obtained
-from an external source.
-
 The analysis uses the DREAMT participant information file,
-`participant_info.csv`. This file should be downloaded separately from
-PhysioNet to reproduce the analysis.
+`participant_info.csv`.
+
+The original dataset and `participant_info.csv` are not included in this
+repository. To reproduce the analysis, the data should be obtained directly
+from PhysioNet.
+
+## Data License
+
+The DREAMT dataset is distributed under the **PhysioNet Restricted Health Data
+License 1.5.0**. Access to the dataset is restricted to registered PhysioNet
+users who agree to the required Data Use Agreement.
+
+Because the DREAMT data are obtained from an external restricted-access source,
+the original data files, including `participant_info.csv`, are not included in
+this repository.
+
+Users who wish to reproduce the analysis should obtain the data directly from:
+
+https://physionet.org/content/dreamt/2.2.0/
 
 ## Analysis
 
@@ -45,6 +59,7 @@ The main steps of the analysis included:
 - Creating a scatterplot to examine the relationship between BMI and AHI
 - Fitting a simple linear regression model with BMI as the explanatory
   variable and AHI as the response variable
+- Estimating the regression parameters using ordinary least squares (OLS)
 - Evaluating the assumptions of the simple linear regression model
 - Examining residual and normal Q-Q plots
 - Conducting a hypothesis test for the regression slope
@@ -62,8 +77,9 @@ where Y represents AHI and X represents BMI.
 
 ## Repository Structure
 
+- `bmi-sleep-apnea-regression.Rproj` - R project file
 - `bmi_ahi_regression.R` - R code used for the statistical analysis
-- `report.pdf` - Project report
+- `report.pdf` - Final project report
 - `figures/` - Figures used in the report
 - `README.md` - Description of the project and repository
 
@@ -72,13 +88,14 @@ repository.
 
 ## Reproducing the Analysis
 
-1. Download the DREAMT dataset from PhysioNet:
+1. Obtain access to the DREAMT dataset through PhysioNet:
    https://physionet.org/content/dreamt/2.2.0/
 2. Download `participant_info.csv`.
 3. Place `participant_info.csv` in the same folder as
    `bmi_ahi_regression.R`.
-4. Open `bmi_ahi_regression.R` in R or RStudio.
-5. Run the R script from beginning to end to reproduce the statistical
+4. Open `bmi-sleep-apnea-regression.Rproj` in RStudio.
+5. Open `bmi_ahi_regression.R`.
+6. Run the R script from beginning to end to reproduce the statistical
    analysis.
 
 The R script reads the dataset using:
